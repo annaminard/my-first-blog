@@ -7,16 +7,13 @@
 			<h1><a href=" ">The Blog</a><h1>
 		</div>
 
+	{% for post in posts %}
 		<div>
-			<p>published: 8.8.15, 12:28 p.m.</p>
-			<h2><a href=" ">Post number one</a><h2>
-			<p>But it. him, too. Word and we bitched about glue. News had to me. Duke. Gilly. Keep coming to pull sister Flo. Strange fascination, fascinating me your hair's alright.</p>
+			<p>published: {{ post.published_date }}</p>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaks }}</p>
 		</div>
+	{% endfor %}
 
-		<div>
-			<p>published: 8.8.15, 12:30 p.m.</p>
-			<h2><a href=" ">Post number two</a><h2>
-			<p>My mother in Heaven's high. You can't we were sunbirds to Major Tom. Jumped up on. Uh-uh-uh-uh, uh-uh. Commencing countdown, engines on me out of sad remains. Full of. Once there. You've left hand.</p>
-		</div>
 	</body>
 </html>
